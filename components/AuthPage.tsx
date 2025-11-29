@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Target, Linkedin, Mail, Lock, User, CheckSquare, Zap, Database, BarChart3, Bot, Loader2, ArrowRight } from 'lucide-react';
 import { UserProfile } from '../types';
@@ -70,7 +69,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onLogin }) => {
   };
 
   const toggleMode = (e: React.MouseEvent) => {
-    e.preventDefault(); // Prevents the error "refused to connect" by stopping link navigation
+    e.preventDefault();
     setIsLoginMode(!isLoginMode);
     setAuthMethod(null);
   };
@@ -78,7 +77,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onLogin }) => {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col lg:flex-row">
       {/* Left Column: Form */}
-      <div className="w-full lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center bg-white shadow-xl z-10">
+      <div className="w-full lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center bg-white shadow-xl z-10 relative">
         <div className="max-w-md mx-auto w-full">
           <div className="flex items-center gap-2 mb-2 text-brand-900 animate-fade-in">
             <Target className="w-10 h-10 text-brand-600" />
@@ -259,6 +258,10 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onLogin }) => {
               </button>
             </div>
           </form>
+
+          <footer className="mt-12 text-center text-xs text-gray-400">
+            &copy; {new Date().getFullYear()} VortexLeads Inc. Todos os direitos reservados.
+          </footer>
         </div>
       </div>
 

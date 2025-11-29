@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { AuthPage } from './components/AuthPage';
 import { OnboardingForm } from './components/OnboardingForm';
@@ -94,6 +93,11 @@ const App: React.FC = () => {
               <LogOut className="w-4 h-4" />
               Sair da conta
             </button>
+            
+            {/* Version Footer */}
+            <div className="mt-4 pt-4 border-t border-brand-700 text-center">
+              <p className="text-[10px] text-brand-400 font-mono opacity-60">v1.0.0 (Release)</p>
+            </div>
           </div>
         </div>
       </aside>
